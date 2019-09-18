@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function newDoc() {
+    window.location.assign("http://www.w3schools.com")
+	document.innerHTML=window.document.URL
+}
+</script>
+</head>
+<body onload="javascript:newDoc()">
+<script type="text/javascript">
+$(window).unload( function () {
+	alert( window.document.URL );
+} );
+</script>
+
+</body>
+</html>
+
+
+

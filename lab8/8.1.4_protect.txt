@@ -1,0 +1,2 @@
+To protect from this types of attack communication must be encrypted.
+Which would mean you can't read anything, including cookies. So filters for HTTP cookies won't work.

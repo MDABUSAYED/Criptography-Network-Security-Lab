@@ -1,0 +1,3 @@
+Because cookies were visible.When I was typing http.cookie on filter option of wireshark then I saw cookie information.
+
+And client facebook account might be vulnerable for cookie injection.

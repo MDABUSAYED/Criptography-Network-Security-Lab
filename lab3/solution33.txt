@@ -1,0 +1,10 @@
+Given  Url   : token=677c5e96ac781d36a535046ca4e6f204secured&user=admin&command1=ListFiles&command2=NoOp
+
+Modified Url : token=298928e8bb81c0e1c4bcca114c30518f&secured&user=admin&command1=ListFiles&command2=NoOp80000000009801000000000000&command3=DeleteAllFiles
+
+Secret key   : secured
+
+Message      : &user=admin&command1=ListFiles&command2=NoOp
+
+Extension    : &command3=DeleteAllFiles
+

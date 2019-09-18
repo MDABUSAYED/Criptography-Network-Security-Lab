@@ -1,0 +1,8 @@
+To check cookie's visibility  attacker first type http.cookie on filter option of wireshark.
+
+After sawing the cookie then he or she copy the cookie value as printable text from wiresherk.
+
+Then attacker open facebbok login page on firefox browser.
+
+Then using Greasemonkey extension and cookie injector attacker attacker write cookie and simply logged in into victim account.
+
